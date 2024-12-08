@@ -19,17 +19,17 @@ public class CatalogPage {
     private static By liItem = By.tagName("li");
     private static By linkItem = By.cssSelector(".listing-wrapper.products li .link");
 
-  //  @Step("Click on the Rubber Duck link in the navigation panel")
+    @Step("Click on the Rubber Duck link in the navigation panel")
     public static void clickLinkRubberDuckNavigationPanel() {
         $(linkRubberDucksNavigationPanel).click();
     }
 
-  //  @Step("Click on the 'Sort by Name' button")
+    @Step("Click on the 'Sort by Name' button")
     public static void clickSortByNameButton() {
         $(sortByNameButton).click();
     }
 
-   // @Step("Get the list of product titles")
+    @Step("Get the list of product titles")
     public static List<String> getListOfTitles() {
         SelenideElement ulElement = $(ulItem);
         List<String> listOfTitles = ulElement.findAll(".listing-wrapper.products li .link")
@@ -41,7 +41,7 @@ public class CatalogPage {
         return listOfTitles;
     }
 
-    //@Step("Compare two lists and check if they are equal after sorting - List Before: {listBefore}, List After: {listAfter}")
+    @Step("Compare two lists and check if they are equal after sorting - List Before: {listBefore}, List After: {listAfter}")
     public static boolean CompareLists(List<String> listBefore, List<String> listAfter) {
         Collections.sort(listBefore);
         if (listBefore.equals(listAfter)) {

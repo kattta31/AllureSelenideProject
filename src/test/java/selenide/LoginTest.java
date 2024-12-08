@@ -16,7 +16,7 @@ public class LoginTest extends TestBase {
     public void loginWithCorrectEmailAndWrongPassword() {
         LoginPage.loginWithCredentials("kattta@tut.by", "123111");
         LoginPage.validateErrorMessageIsDisplayed();
-        LoginPage.validateErrorMessageText("Wrong password or the account is disabled, or does not exist");
+        LoginPage.validateErrorMessageText("!Wrong password or the account is disabled, or does not exist");
     }
 
     @Description("Test login with unregistered email and any password to verify that the appropriate error message is displayed")
