@@ -35,11 +35,13 @@ public class TestBase {
         switch (browser) {
             case chrome ->  caps.setBrowserName("chrome");
             case firefox -> caps.setBrowserName("firefox");
+            default -> caps.setBrowserName("chrome");
         }
 
         switch (os) {
             case windows -> caps.setPlatform(Platform.WINDOWS);
             case linux -> caps.setPlatform(Platform.LINUX);
+            default -> caps.setPlatform(Platform.WINDOWS);
         }
 
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.48:4444/wd/hub"),caps);
