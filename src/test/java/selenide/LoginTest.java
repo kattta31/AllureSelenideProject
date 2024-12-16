@@ -32,7 +32,7 @@ public class LoginTest extends TestBase {
     @Story("Registered user should be able to log in successfully")
     @Test
     public void RegisteredUserInput() {
-        LoginPage.loginWithCredentials("kattta@tut.by", "123123!!");//Specially added "!" for test failure
+        LoginPage.loginWithCredentials("kattta@tut.by", "123123!");//Specially added "!" for test failure
         LoginPage.valideSuccessMessageIsDisplayed();
         LoginPage.valideSuccessMessageText("You are now logged in as Katya Karpukhina.");
     }
