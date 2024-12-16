@@ -43,7 +43,7 @@ public class TestBase {
             case linux -> caps.setPlatform(Platform.LINUX);
             default -> caps.setPlatform(Platform.WINDOWS);
         }
-
+        Configuration.pageLoadTimeout = 10000;
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.48:4444/wd/hub"),caps);
 
         WebDriverRunner.setWebDriver(driver);
