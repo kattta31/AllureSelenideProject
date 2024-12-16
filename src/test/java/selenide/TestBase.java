@@ -48,8 +48,6 @@ public class TestBase {
 
         WebDriverRunner.setWebDriver(driver);
 
-
-
         open("https://litecart.stqa.ru/en/");
     }
     @AfterMethod
